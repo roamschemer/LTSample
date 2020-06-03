@@ -6,6 +6,7 @@ using Xamarin.Essentials.Interfaces;
 using Xamarin.Essentials.Implementation;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using LTSample.Models;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace LTSample {
@@ -27,6 +28,7 @@ namespace LTSample {
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry) {
             containerRegistry.RegisterSingleton<IAppInfo, AppInfoImplementation>();
+            containerRegistry.RegisterSingleton<CoreModel>();
 
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
