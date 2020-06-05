@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<controls:CustomTabbedPage  xmlns:controls="clr-namespace:LTSample.Controls"
+                            xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:prism="http://prismlibrary.com"
+            prism:ViewModelLocator.AutowireViewModel="True"
+            x:Class="LTSample.Views.TabbedPage3"
+            Title="SamplePage"
+            Visual="{Binding Visual.Value}">
+
+  <ContentPage Title="Tab1">
+    <StackLayout>
+      <Label Text="Label" TextColor="#623E3E" HeightRequest="20" />
+      <Button Text="Button" BackgroundColor= "Brown" TextColor="Black" HeightRequest="40"/>
+      <Switch IsToggled="True" OnColor="#15CA55" ThumbColor="#12823A" HeightRequest="20" HorizontalOptions="Start"/>
+      <Entry Text="Entry"  HeightRequest="60"/>
+      <CheckBox IsChecked="True" Color="#FA7F7F"  HeightRequest="20"/>
+      <ProgressBar Progress="0.6" ProgressColor="#3488D9"  HeightRequest="8"/>
+      <Slider Value="0.5" ThumbColor="#FF0303" MinimumTrackColor="#FF0303" MaximumTrackColor="#E8E8E8" HeightRequest="8"/>
+      <ListView ItemsSource="{Binding Collection}">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell Height="20">
+              <Label Text="{Binding}"  TextColor="#623E3E" HeightRequest="20" FontSize="16"/>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+    </StackLayout>
+  </ContentPage>
+
+  <ContentPage Title="Tab2">
+    <StackLayout >
+      <Picker Title="Picker" ItemsSource="{Binding Collection}" />
+      <TimePicker />
+      <DatePicker />
+    </StackLayout>
+  </ContentPage>
+
+  <ContentPage Title="Tab3">
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+      <Switch IsToggled="{Binding Switch.Value}"/>
+    </StackLayout>
+  </ContentPage>
+
+</controls:CustomTabbedPage>

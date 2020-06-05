@@ -34,6 +34,7 @@ namespace LTSample {
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
             containerRegistry.RegisterForNavigation<TabbedPage1, TabbedPage1ViewModel>();
             containerRegistry.RegisterForNavigation<TabbedPage2, TabbedPage1ViewModel>();
+            containerRegistry.RegisterForNavigation<TabbedPage3, TabbedPage1ViewModel>();
         }
     }
 }
