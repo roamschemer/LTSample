@@ -5,7 +5,8 @@
              Title="MainPage">
 
   <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-    <Button Text="TabbedPage1" CommandParameter="TabbedPage1" Command="{Binding Command}" />
+    <Button Text="調整前" CommandParameter="TabbedPage1" Command="{Binding Command}" />
+    <Button Text="位置と色調整" CommandParameter="TabbedPage2" Command="{Binding Command}" />
     <Label Text="Material"/>
     <Switch IsToggled="{Binding Switch.Value}"/>
   </StackLayout>
