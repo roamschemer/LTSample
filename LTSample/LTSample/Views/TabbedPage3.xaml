@@ -6,7 +6,8 @@
             prism:ViewModelLocator.AutowireViewModel="True"
             x:Class="LTSample.Views.TabbedPage3"
             Title="SamplePage"
-            Visual="{Binding Visual.Value}">
+            Visual="{Binding Visual.Value}"
+            BarBackgroundColor="#6EC1A6">
 
   <ContentPage Title="Tab1">
     <StackLayout>
